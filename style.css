@@ -1,0 +1,257 @@
+/* ========================================= 
+   RESET / BASE 
+   ========================================= */ 
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+} 
+
+body { 
+  font-family: 'Poppins', sans-serif; 
+  background-color: plum; 
+  color: rgb(30, 29, 28); 
+  line-height: 1.6; 
+} 
+
+.container { 
+  max-width: 800px; 
+  margin: 0 auto; 
+  padding: 0 20px; 
+} 
+
+/* ========================================= 
+   HEADER / NAVBAR (Flexbox) 
+   ========================================= */ 
+.site-header { 
+  background-color: aqua; 
+  padding: 16px 0; 
+} 
+
+.header-inner { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+} 
+
+.brand { 
+  color: rgb(25, 25, 25); 
+  font-weight: 700; 
+  font-size: 20px; 
+  text-decoration: none;
+} 
+
+.nav-links { 
+  display: flex; 
+  gap: 20px; 
+  list-style-type: none;
+  margin-bottom: 0;
+} 
+
+.nav-links a { 
+  color: #0d1219; 
+  text-decoration: none; 
+  transition: color 0.2s ease; 
+} 
+
+.nav-links a:hover { 
+  color: #8FE3D0; 
+} 
+
+/* ========================================= 
+   INTRO SECTION 
+   ========================================= */ 
+.intro { 
+  text-align: center; 
+  padding: 48px 0 32px; 
+} 
+
+.avatar { 
+  width: 120px; 
+  height: 120px; 
+  object-fit: cover;
+  border-radius: 50%; 
+  border: 3px solid #065A82; 
+  margin-bottom: 20px; 
+  filter: grayscale(100%);
+  transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.avatar:hover {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+h1 { 
+  color: rgb(228, 94, 27); 
+  font-family: 'Poppins', sans-serif; 
+  font-size: 32px; 
+  margin-bottom: 16px; 
+} 
+
+h2 { 
+  color: rgb(231, 12, 184); 
+  font-size: 22px; 
+  margin-bottom: 12px; 
+}
+
+/* Lab 02: pseudo-element */
+h2::before {
+  content: "✦ ";
+}
+
+.intro p { 
+  color: ghostwhite; 
+  max-width: 600px; 
+  margin: 0 auto; 
+} 
+
+/* ========================================= 
+   CARDS (Box Model + Borders + Shadows) 
+   ========================================= */ 
+.card { 
+  background-color: #FFFFFF; 
+  padding: 24px; 
+  border: 1px solid #D6DEE2; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); 
+  margin-bottom: 24px; 
+  transition: transform 0.2s ease; 
+} 
+
+.card:hover { 
+  transform: translateY(-4px); 
+}
+
+/* Bootstrap card section */
+.bootstrap-card {
+  position: relative;
+}
+
+.hobby-image {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Lab 02: absolute badge */
+.new-badge {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background-color: #e410e4;
+  color: white;
+  padding: 3px 9px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+/* ========================================= 
+   HOBBIES LIST 
+   ========================================= */ 
+.hobbies-list { 
+  list-style-type: square; 
+  padding-left: 20px; 
+} 
+
+.hobbies-list li { 
+  color: #065A82; 
+  margin-bottom: 6px; 
+} 
+
+/* =========================================
+   THREE SKILL CARDS - FLEXBOX
+   ========================================= */
+.skills-section {
+  margin-bottom: 24px;
+}
+
+.skill-cards {
+  display: flex;
+  gap: 16px;
+}
+
+.skill-card {
+  flex: 1;
+  background-color: #FFFFFF;
+  padding: 20px;
+  border: 1px solid #D6DEE2;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-4px);
+}
+
+.skill-card h3 {
+  color: #e70cb8;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.skill-card p {
+  margin-bottom: 12px;
+}
+
+/* ========================================= 
+   SCHEDULE TABLE 
+   ========================================= */ 
+.schedule-table { 
+  width: 100%; 
+  border-collapse: collapse; 
+} 
+
+.schedule-table th, 
+.schedule-table td { 
+  text-align: left; 
+  padding: 10px 12px; 
+  border-bottom: 1px solid #E3E8EB; 
+} 
+
+.schedule-table th { 
+  background-color: #10c9e6; 
+  color: #c717b3; 
+} 
+
+.schedule-table tr:nth-child(even) { 
+  background-color: #e410e4; 
+} 
+
+/* ========================================= 
+   CONTACT CARD / BUTTON LINK 
+   ========================================= */ 
+.contact-card p { 
+  margin-bottom: 16px; 
+  color: #3A3A3A; 
+} 
+
+/* ========================================= 
+   FOOTER 
+   ========================================= */ 
+.site-footer { 
+  text-align: center; 
+  padding: 20px 0; 
+  color: #5B6B73; 
+  font-size: 13px; 
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .skill-cards {
+    flex-direction: column;
+  }
+}
